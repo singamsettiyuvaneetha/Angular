@@ -1,0 +1,38 @@
+/* year.component.css */
+.container {
+  background-color: #fadfdf;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+  color: #343a40;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #f08b8b;
+  border-color: #f0bfbf;
+}
+
+.btn-primary:hover {
+  background-color: #efd0d0;
+  border-color: #f4c0c1;
+}
+
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+.form-check-label {
+  margin-left: 5px;
+}

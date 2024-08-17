@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="year.component.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Feedback Form</h1>
+    <form (ngSubmit)="onSubmit()" #feedbackForm="ngForm">
+      <div class="mb-3">
+        <label for="rating" class="form-label">Rating</label>
+        <div id="rating" class="form-check">
+          <input type="radio" id="bad" name="rating" [(ngModel)]="feedback.rating" value="Bad" class="form-check-input" required>
+          <label for="bad" class="form-check-label">Bad</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="good" name="rating" [(ngModel)]="feedback.rating" value="Good" class="form-check-input">
+          <label for="good" class="form-check-label">Good</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="excellent" name="rating" [(ngModel)]="feedback.rating" value="Excellent" class="form-check-input">
+          <label for="excellent" class="form-check-label">Excellent</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Comment</label>
+        <textarea id="message" class="form-control" rows="5" [(ngModel)]="feedback.message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    </form>
+  </div>
+  
+</body>
+</html>

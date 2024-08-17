@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="placements.component.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Placement Feedback Form</h1>
+    <form (ngSubmit)="onSubmit()" #feedbackForm="ngForm">
+      <div class="mb-3">
+        <label for="company" class="form-label">Company</label>
+        <select id="company" class="form-control" [(ngModel)]="feedback.company" name="company" required>
+          <option value="" disabled>Select a company</option>
+          <option *ngFor="let company of companies" [value]="company">{{ company }}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="lpa" class="form-label">LPA (Lakhs Per Annum)</label>
+        <input type="number" id="lpa" class="form-control" [(ngModel)]="feedback.lpa" name="lpa" min="0" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    </form>
+  </div>
+</body>
+</html>

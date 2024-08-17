@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Score Feedback Form</h1>
+        <form (ngSubmit)="onSubmit()" #feedbackForm="ngForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control" [(ngModel)]="feedback.name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="score" class="form-label">Score</label>
+            <input type="number" id="score" class="form-control" [(ngModel)]="feedback.score" name="score" min="0" max="10" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </form>
+      </div>
+      
+      
+</body>
+</html>
